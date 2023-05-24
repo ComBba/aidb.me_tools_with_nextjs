@@ -1,3 +1,4 @@
+// app/navbar.tsx
 'use client';
 
 import { Fragment } from 'react';
@@ -70,7 +71,7 @@ export default function Navbar({ user }: { user: any }) {
               <div className="hidden sm:ml-6 sm:flex sm:items-center">
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <Menu.Button className="flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2">
+                    <Menu.Button className="flex items-center rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2">
                       <span className="sr-only">Open user menu</span>
                       <Image
                         className="h-8 w-8 rounded-full"
@@ -79,6 +80,7 @@ export default function Navbar({ user }: { user: any }) {
                         width={32}
                         alt={`${user?.name || 'placeholder'} avatar`}
                       />
+                      <span className="ml-3 text-gray-700">{user?.name}</span>
                     </Menu.Button>
                   </div>
                   <Transition
